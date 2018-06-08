@@ -1,0 +1,10 @@
+{
+  "name": "Mysonette",
+  "version": "1.0.0",
+  "description": "Mymysona",
+  "main": "main.js",
+  "author": "Coul33t",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
