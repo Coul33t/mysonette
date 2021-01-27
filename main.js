@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const { Client }  = require("discord.js");
+const client = new Client();
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -24,10 +24,9 @@ client.on("ready", () => {
 });
 
 client.on("message", (message) => {
-    if (message.isMentioned(client.user)) {
-        rand = getRandomInt(answers.length);
-        message.channel.send(answers[rand]);
-    }
+  if (message.mentions.users.has(client.user.id)) {
+    message.channel.send( answers[ getRandomInt( answers.length) ] );
+  }
 
     console.log("I am ready!");
 });
